@@ -17,18 +17,9 @@ TAGS="callsing genre band artist songstamp seconds station_id"
 QUERY=`curl --silent "$BASEURL$ENDPOINT"`
 
 
-for tag in $TAGS;
-do
-  #if echo $QUERY | grep -e $tag;
+if [[ -n $( echo $QUERY | egrep "callsing|genre|band|artist|songstamp|seconds|station_id" )  ]]; then
+     echo "Tags found OK"
+  else
+     echo "Tags not found, NOTOK"
+fi
 
-  if [[ $( echo $QUERY | grep 'artist' ) = *artist* ]]; then
-     echo "Found a Tomcat!"
-  fi
-
-    #  then
-    #     echo "tag not present"
-    #  else
-    #     echo "ok response"
-  #fi
-done
-						             
