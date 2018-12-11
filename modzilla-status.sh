@@ -7,7 +7,7 @@
 
 BASEURL="http://radio.api.mobzilla.com/"
 ENDPOINT=$1
-TAGS="callsing|genre|band|artist|songstamp|seconds|station_id"
+TAGS=$2
 
 
 ##############
@@ -17,7 +17,6 @@ TAGS="callsing|genre|band|artist|songstamp|seconds|station_id"
 QUERY=`curl --silent "$BASEURL$ENDPOINT"`
 
 
-#if [[ -n $( echo $QUERY | egrep "callsing|genre|band|artist|songstamp|seconds|station_id" )  ]]; then
 if [[ -n $( echo $QUERY | egrep "$TAGS" )  ]]; then
      echo "Tags found OK"
   else
