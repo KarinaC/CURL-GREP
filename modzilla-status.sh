@@ -59,6 +59,10 @@ TAGS="url|encoding|callsign|websiteurl"
 echo "El script requiere de 1 variable, favor de agregarla"
 exit
 ;;
+*)
+echo "Solo se aceptan los valores: 'DARSTATIONS, PLAYLIST, RECO, RECO-v2, TOPSONGS, UBERGUIDE, UBERURL'" 
+exit
+;;
 esac
 
 
