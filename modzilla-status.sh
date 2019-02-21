@@ -1,8 +1,5 @@
 #!/bin/bash
 
-kakakakakaak
-kakaakkakakak
-putooooooooooooooooooooooooooo
 
 ###############################################################
 # Creador: Karina Cost
